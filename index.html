@@ -15,25 +15,34 @@
 
 
 
-  <header class="pos_header">
+  <header class="pos_header" id="d_header">
     <div class="container">
       <div class="header_inner">
         <div class="pos_header_logo">
           <img src="./images/logo.jpg" alt="logo" class="main_logo">
         </div>
         <div class="pos_header_menu">
-          <div class="search-container">
+          <div class="search-container" id="search_desktop">
             <form action="/action_page.php">
               <button type="submit"><i class="fa fa-search"></i></button>
               <input type="text" placeholder="Search.." name="search">			  
             </form>
           </div>
           <img src = "./images/shopping-bag.png" id="cart-icon" alt="Shopping Bag">
-          <a href="./login.html"><img src = "./images/log-in.png" alt="Login"></a>
+          <a href="./login.html" id="myacc_page"><img src = "./images/log-in.png" alt="Login" id="myaccount-icon"></a>
         </div>
+      </div>
+      <div class="search-container" id="search_mobile">
+        <form action="/action_page.php">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" placeholder="Search.." name="search">			  
+        </form>
       </div>
     </div>
   </header>
+
+
+
 
 
   

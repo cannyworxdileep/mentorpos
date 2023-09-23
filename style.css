@@ -586,6 +586,8 @@ label#login_form_pwd {
 /**************Responsive***************/
 
 @media (max-width: 480px) {
+    #m_headet{display:block;}
+    #d_headet{display:none;}
     .container 			{padding:0px 20px;}
     .banner {
         padding: 20px 0;

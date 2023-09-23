@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login</title>
+<link type="text/css" href="style.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/aceb3b55c7.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    
+        <div class="container">
+            <div class="login_page">
+            <img src="./images/logo.jpg" alt="logo" class="main_logo">
+            <h1>Login</h1>
+            <p>Enter the information you enter while registering.</p>
+
+            <form action="/action_page.php" method="post" id="login_form">
+                  <label for="uname" id="login_form_uname">Email</label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+              
+                  <label for="psw" id="login_form_pwd">Password</label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <a href="./forgotpassword.html" id="forgot_pwd">Forgot password?</a>
+                      
+                  <button type="submit" class="submit_login">Login</button>
+                  <p class="no_account">Don’t have an account?  <a href="./signup.html">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+
+   
+ 
+</body>
+</html>

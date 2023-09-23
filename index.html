@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link type="text/css" href="style.css" rel="stylesheet">
+<title>Index</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<body>
+
+
+
+  <header class="pos_header">
+    <div class="container">
+      <div class="header_inner">
+        <div class="pos_header_logo">
+          <img src="./images/logo.jpg" alt="logo" class="main_logo">
+        </div>
+        <div class="pos_header_menu">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <button type="submit"><i class="fa fa-search"></i></button>
+              <input type="text" placeholder="Search.." name="search">			  
+            </form>
+          </div>
+          <img src = "./images/shopping-bag.png" id="cart-icon" alt="Shopping Bag">
+          <a href="./login.html"><img src = "./images/log-in.png" alt="Login"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <header class="pos_header" id="m_heder">
+    <div class="container">
+      <div class="header_inner">
+        <div class="pos_header_logo">
+          <img src="./images/logo.jpg" alt="logo" class="main_logo">
+        </div>
+        <div class="pos_header_menu">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <button type="submit"><i class="fa fa-search"></i></button>
+              <input type="text" placeholder="Search.." name="search">			  
+            </form>
+          </div>
+          <img src = "./images/shopping-bag.png" id="cart-icon" alt="Shopping Bag">
+          <a href="./login.html"><img src = "./images/log-in.png" alt="Login"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Cart Popup -->
+  <div class="cart-popup" id="cart-popup">
+    <img src="./images/close-icon.png" id="close-popup">
+    <div class="cart-content">
+       
+        <div class="cart_content_heading">
+          <h4>Items Added</h4>
+          <a href="#">Clear All</p>
+        </div>
+
+        <div class="cart_content_item_details">
+          <div class="ccid_left">
+              <img src="./images/product.jpg">
+              <div class="ccid_item_content">
+                <h4 class="product_title">Atta Golgappa</h4>
+                <h4 class="product_price">Rs.79</h4>
+              </div>
+          </div>
+          <div class="ccid_quantity">
+            <div class="quantity">
+              <button class="minus-btn" type="button" name="button">
+                <img src="./images/minus.svg" alt="" />
+              </button>
+              
+              <input type="text" name="name" value="1">
+              <button class="plus-btn" type="button" name="button">
+                <img src="./images/plus.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="more_items">
+          <h5><span class="cart_mca_popup_icon" ><img src="./images/plus.png"></span>More Items</h5><i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="cooking_instrcutions">
+          <h5><span class="cart_mca_popup_icon" ><img src="./images/cooking.png"></span>Add Cooking Instructions</h5><i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="apply_coupoun">
+          <h5><span class="cart_mca_popup_icon" ><img src="./images/coupons.png"></span>Apply Coupon</h5><i class="fa-solid fa-chevron-right"></i>
+        </div>
+        
+
+
+        <div class="cart_billing">
+          <h3>Bill Summary</h3>
+          <div class="cart_billing_list" id="subtotal">
+            <h5>Subtotal</h5><h5 class="amount_right">Rs.79</h5>
+          </div>
+          <div class="cart_billing_list" id="totaltax">
+            <h5>Total Tax</h5><h5 class="amount_right">Rs.3.95</h5>
+          </div>
+          <div class="cart_billing_list" id="roundoff">
+            <h5>Round Off</h5><h5 class="amount_right">Rs.0.05</h5>
+          </div>
+          <hr style="height:1px;border-width:0;color:#E7E7E7;background-color:#E7E7E7;width:100%;margin: 8px 0;">
+          <div class="cart_billing_list" id="roundoff">
+            <h5>Round Off</h5><h5 class="amount_right">Rs.83</h5>
+          </div>
+        </div>
+
+
+        <div class="cart_delivery">
+          <div class="cart_delivery_left">
+            <h4>Delivery at Home</h4>
+            <p>4517 Washington Ave. Manchester, Kentucky....</p>
+          </div>
+          <div class="cart_delivery_right">
+            <a href="#" id="address_edit"><img src="./images/delivery_edit.png"></a>
+          </div>
+        </div>
+
+        <hr style="height:1px;border-width:0;color:#E7E7E7;background-color:#E7E7E7;width:100%;margin: 8px 0;">
+
+        <div class="cart_payment">
+          <div class="pay_using">
+            <select name="payment_method" id="pay_method">
+              <option value="debitcard">Pay Using</option>
+              <option value="debitcard">Debit Card</option>
+              <option value="creditcard">Credit Card</option>
+              <option value="upi">UPI</option>
+              <option value="simpl">Simpl</option>
+            </select>
+          </div>
+          <a href="#" id="place_order">Place Order</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+  <div class="banner">
+    <div class="container">
+      <img src="./images/Banner.jpg" alt="home-banner">
+    </div>
+  </div>
+  
+  <!-- Offers Ribbon -->
+  <div class="offers_ribbon">
+    <div class="container">
+  <div class="offers_nav">
+      <ul class="Offers">
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+           <li>
+            <div class="offers_box">
+              <img src="./images/offer-img.png">
+              <div class="offers_box_text">
+                <h5>15% OFF </h5>
+                <p>for your next order!</p>
+              </div>
+            </div>
+           </li>
+      </ul>
+ </div>
+ </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+<div class="food_tems_main">
+  <div class="food_tems_main_left">
+  <h4>CATEGORIES</h4>  
+  <ul class="fooditem-nav">
+    <li><a href="#food_item_1"><img src="./images/chaat.png"> <span>Chaat (20)</span></a></li>
+    <li><a href="#food_item_2"><img src="./images/snacks.png"> <span>Snacks (10)</span></a></li>
+    <li><a href="#food_item_3"><img src="./images/combos.png"> <span>Combos (12)</span></a></li>
+    <li><a href="#food_item_4"><img src="./images/meals.png"> <span>Meals (16)</span></a></li>
+    <li><a href="#food_item_5"><img src="./images/thalis.png"> <span>Thalis (25)</span></a></li>
+    <li><a href="#food_item_6"><img src="./images/chai.png"> <span>Chai Flask (12)</span></a></li>
+    <li><a href="#food_item_7"><img src="./images/parathas.png"> <span>Parathas (10)</span></a></li>
+    <li><a href="#food_item_8"><img src="./images/beverages.png"> <span>Beverage (12)</span></a></li>
+    <li><a href="#food_item_9"><img src="./images/chakna.png"> <span>Chakhna (14)</span></a></li>
+    <li><a href="#food_item_10"><img src="./images/desserts.png"> <span>Desserts (18)</span></a></li>
+  </ul>  
+</div>
+
+  <div class="food_tems_main_right">
+    <div class="veg_nveg_ribbon">
+      <a href="#" class="veg"><img src="./images/vegetables.png"><span>Veg</span></a>
+      <a href="" class="non-veg"><img src="./images/nonveg.png"><span>Non Veg</span></a>
+      <a href="" class="best-sellers"><img src="./images/bestsellers.png"><span>Best seller</span></a>
+      <a href="" class="top-rated"><img src="./images/toprated.png"><span>Top rated</span></a>
+    </div>
+      <section id="food_item_1" class="food_item_box">
+        <h3>Chaat</h3>
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Delhi Aloo Chaat</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.179</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Kachori Aloo Sabji</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->        
+      </section>
+
+
+      <section id="food_item_2" class="food_item_box">
+        <h3>Snacks</h3>
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Bun Maska Bhujia</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Bun Samosa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.179</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Samosa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item--> 
+      </section>
+
+
+
+      <section id="food_item_3" class="food_item_box">
+        <h3>Combos</h3>
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Delhi Aloo Chaat</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.179</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Kachori Aloo Sabji</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item--> 
+      </section>
+
+
+
+      <section id="food_item_4" class="food_item_box">
+        <h3>Meals</h3>
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Delhi Aloo Chaat</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.179</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Kachori Aloo Sabji</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item-->
+
+        <div class="food_item_details">
+          <div class="food_item_details_left">
+            <img src="./images/golgappa.jpg">
+            <div class="add_item">
+              
+                <button id="addButton" onclick="replaceWithDiv()">Add</button>
+                <div id="moreDiv">
+                  <div class="ccid_quantity">
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">
+                        <img src="./images/minus.svg" alt="" />
+                      </button>
+                      
+                      <input type="text" name="name" value="1">
+                      <button class="plus-btn" type="button" name="button">
+                        <img src="./images/plus.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="food_item_details_right">
+            <h4>Atta Golgappa</h4>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="rating_text">120 Ratings</span>
+            </div>
+            <h5>Rs.79</h5>
+            <p>Crisp plate of pani puri/puchkas made of atta & rava. Served with black chickpeas, boiled potato filling & chilled sweet, spicy & tangy water( Medium Spicy )</p>
+          </div>
+        </div><!--End First Item--> 
+      </section>
+
+
+
+      <section id="food_item_5" class="food_item_box">
+        <h3>Thalis</h3>
+      </section>
+      <section id="food_item_6" class="food_item_box">
+        <h3>Chai Flask</h3>
+      </section>
+      <section id="food_item_7" class="food_item_box">
+        <h3>Parathas</h3>
+      </section>
+      <section id="food_item_8" class="food_item_box">
+        <h3>Beverage</h3>
+      </section>
+      <section id="food_item_9" class="food_item_box">
+        <h3>Chakhna</h3>
+      </section>
+      <section id="food_item_10" class="food_item_box">
+        <h3>Desserts</h3>
+      </section>
+  </div>
+  
+</div>
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.fooditem-nav a');
+
+    // Initially, add the active class to the first link
+    navLinks[0].classList.add('active-link');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1); // Get the target section's ID
+        const targetSection = document.getElementById(targetId);
+
+        // Remove active class from all links
+        navLinks.forEach(function (navLink) {
+          navLink.classList.remove('active-link');
+        });
+
+        // Add active class to the clicked link
+        link.classList.add('active-link');
+
+        // Scroll to the target section with an offset of 100px
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'auto', block: 'start', inline: 'nearest' });
+          window.scrollBy(0, -30); // Adjust the offset as needed
+        }
+      });
+    });
+  });
+</script>
+
+
+
+<!-- Cart Popup-->
+<script type="text/javascript">
+  const cartIcon = document.getElementById('cart-icon');
+  const cartPopup = document.getElementById('cart-popup');
+  const closePopupButton = document.getElementById('close-popup');
+
+  cartIcon.addEventListener('click', () => {
+      cartPopup.style.right = '0';
+  });
+
+  closePopupButton.addEventListener('click', () => {
+      cartPopup.style.right = '-450px';
+  });
+</script>
+
+
+
+<!-- Cart quantity Functionality-->
+<script type="text/javascript">
+$('.minus-btn').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('div').find('input');
+  var value = parseInt($input.val());
+
+  if (value > 1) {
+      value = value - 1;
+  } else {
+      value = 0;
+  }
+
+  $input.val(value);
+});
+
+$('.plus-btn').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('div').find('input');
+  var value = parseInt($input.val());
+
+  if (value < 100) {
+      value = value + 1;
+  } else {
+      value = 100;
+  }
+
+  $input.val(value);
+});
+</script>
+
+<!-- Replace a tag with quantity-->
+<script>
+  function replaceWithDiv() {
+    var addButton = document.getElementById("addButton");
+    var moreDiv = document.getElementById("moreDiv");
+
+    addButton.style.display = "none"; // Hide the "Add" button
+    moreDiv.style.display = "block"; // Show the div with "More" button
+  }
+</script>
+
+
+
+</body>
+</html>

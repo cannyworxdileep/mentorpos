@@ -28,31 +28,25 @@ p					{margin:0;  font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem);
 
 .pos_header{padding: 10px 0; border-bottom: 1px solid #E6E6E6;}
 .header_inner {display: flex;align-items: center;justify-content: space-between;}
-#m_heder{display: none;}
+#m_header{display: none;}
 
 .banner {padding: 30px 0;}
 .banner img{width: 100%;}
 
 
 .pos_header_menu {display: flex;gap: 20px;    align-items: center;}
-.pos_header_menu img {background-color: #FFF3EF;padding: 7px;border-radius: 6px;}
+.pos_header_menu img {background-color: #FFF3EF;padding: 7px;border-radius: 6px;width: 35px;height: auto;}
+#myaccount-icon { margin-top: 2px;    }
+#myacc_page{font-size: 10px;}
 #cart-icon { cursor: pointer;}
-.pos_header_menu form {
-    background-color: #F3F3F4;
-    padding: 7px;
-    border-radius: 6px;
-    border: 1px solid #CECECE;
+.search-container form {background-color: #FAFBFC; padding: 7px;border-radius: 6px;border: 1px solid #e9e9e9;
+    min-width: 250px;display: flex;gap: 8px;}
+.search-container form input {border: none;background: none;}
+.search-container form button {border: none;background: no-repeat; color:#F15927;}
+.search-container form input:focus {
+    outline: none !important;
 }
-
-.pos_header_menu form input {
-    border: none;
-    background: none;
-}
-
-.pos_header_menu form button {
-    border: none;
-    background: no-repeat;
-}
+#search_mobile{display: none;}
 
 
 
@@ -586,26 +580,19 @@ label#login_form_pwd {
 /**************Responsive***************/
 
 @media (max-width: 480px) {
-    #m_headet{display:block;}
-    #d_headet{display:none;}
+    #m_header{display:block !important;}
+    
     .container 			{padding:0px 20px;}
-    .banner {
-        padding: 20px 0;
-    }
+    .search-container { margin-top: 13px;    }
+    #search_mobile{display: block;}
+    #search_desktop{display: none;}
+    .pos_header { padding: 10px 0;border-bottom: none;    }
+    .banner {padding: 13px 0 20px 0;    }
     .food_tems_main {flex-direction: column;}
-    .food_tems_main_left {
-        display: none;
-    }
-    .veg_nveg_ribbon {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: scroll;
-    }
+    .food_tems_main_left { display: none;}
+    .veg_nveg_ribbon {display: flex;align-items: flex-end;flex-direction: row;justify-content: flex-start;gap: 20px;overflow-x: scroll;    }
     .veg_nveg_ribbon a {
-        padding: 8px 5px;
+        padding: 5px 5px;
         min-width: 110px;
         justify-content: center;
         font-size: 12px;
@@ -633,5 +620,8 @@ label#login_form_pwd {
     }
     .food_item_details {
         flex-direction: row-reverse;
+    }
+    .offers_box {
+        padding: 5px;
     }
 }

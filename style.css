@@ -268,25 +268,25 @@ p					{margin:0;  font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem);
 .cart-popup {
   position: fixed;
   top: 0;
-  right: -430px; /* Initially hidden on the right side */
+  right: -430px; 
   width: 430px;
-  height: 100%; /* Occupies the entire viewport height */
-  background-color: transparent; /* Set the background as transparent */
+  height: 100%; 
+  background-color: transparent;
   overflow-y: auto;
   transition: right 0.3s ease-in-out;
   z-index: 999;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Apply the box shadow */
+  gap: 15px;  
 }
 
 /* CSS for the cart content */
 .cart-content {
   padding: 20px;
-  background-color: #fff; /* Set the background color for the cart content */
-  min-height: 100vh; /* Ensure cart content covers the entire viewport height */
+  background-color: #fff; 
+  min-height: 100vh; 
   width: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
 }
 
 .cart_mca_popup_icon img {

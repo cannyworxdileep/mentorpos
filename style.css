@@ -387,12 +387,15 @@ background-color: #FDF1EC;
 .cart_delivery {
     display: flex;
     justify-content: space-between;
-    gap: 25px;margin: 30px 0;
+    gap: 25px;
+    padding: 30px 0;
+    background-color: #fff;
 }
 .cart_payment {
     display: flex;
     align-items: center;
     justify-content: space-between;padding-top: 15px;
+    background-color: #fff;
 }
 
 #place_order {

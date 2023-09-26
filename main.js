@@ -1,3 +1,6 @@
+
+// Home Page Menu
+
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.fooditem-nav a');
 
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
+// Replace add with Cart Quantity
 function replaceWithDiv() {
   var addButton = document.getElementById("addButton");
   var moreDiv = document.getElementById("moreDiv");
@@ -38,6 +41,8 @@ function replaceWithDiv() {
 }
 
 
+
+// Cart popup 
 document.addEventListener('DOMContentLoaded', function() {
   const cartIcon = document.getElementById('cart-icon');
   const cartPopup = document.getElementById('cart-popup');
@@ -53,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+// Cart popup Increment
 $(document).ready(function() {
   $('.minus-btn').on('click', function(e) {
     e.preventDefault();
@@ -84,3 +91,5 @@ $(document).ready(function() {
     $input.val(value);
   });
 });
+
+

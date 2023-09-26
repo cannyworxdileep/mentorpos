@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OTP</title>
+<link type="text/css" href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+    
+        <div class="container">
+            <div class="otp_page">
+            <h2>OTP Code</h2>
+            <p>We sent OTP code vis email to abc@gmail.com.</p>
+                
+            <div id="otp_inputs" class="inputs">
+                <input class="otp_input" type="text" inputmode="numeric" maxlength="1" />
+                <input class="otp_input" type="text" inputmode="numeric" maxlength="1" />
+                <input class="otp_input" type="text" inputmode="numeric" maxlength="1" />
+                <input class="otp_input" type="text" inputmode="numeric" maxlength="1" />
+            </div>
+            <p class="send_again">Wait for 1:00 <a href="#">Send Again</a></p>
+            <button type="submit" class="otp_submit">Next</button>
+        </div>
+
+
+    <script>
+        
+        const inputs = document.getElementById("otp_inputs");
+        
+        otp_inputs.addEventListener("input", function (e) {
+          const target = e.target;
+          const val = target.value;
+        
+          if (isNaN(val)) {
+            target.value = "";
+            return;
+          }
+        
+          if (val != "") {
+            const next = target.nextElementSibling;
+            if (next) {
+              next.focus();
+            }
+          }
+        });
+        
+        inputs.addEventListener("keyup", function (e) {
+          const target = e.target;
+          const key = e.key.toLowerCase();
+        
+          if (key == "backspace" || key == "delete") {
+            target.value = "";
+            const prev = target.previousElementSibling;
+            if (prev) {
+              prev.focus();
+            }
+            return;
+          }
+        });
+    </script>
+
+   
+ 
+</body>
+</html>

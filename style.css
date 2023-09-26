@@ -16,6 +16,7 @@ h4					{font-size: clamp(1rem, 0vw + 1rem, 1rem);
     line-height: clamp(1.3rem, 0vw + 1.3rem, 1.3rem); font-weight: 600;}
 p					{margin:0;  font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem);
     line-height: clamp(1.4rem, 0vw + 1.4rem, 1.4rem);color:#555555;}
+form, submit, input {font-family: 'Montserrat';}
 .clear 				{clear: both;}
 .full_wrap 			{width: 100%;margin: 0px;padding: 0px;}
 .container 			{max-width: 1240px;margin: auto;height: auto;width: 100%;}
@@ -264,31 +265,23 @@ p					{margin:0;  font-size: clamp(0.875rem, 0vw + 0.875rem, 0.875rem);
 
 
 /************Cart Popup***********/
-/* CSS for the cart popup */
 .cart-popup {
-  position: fixed;
-  top: 0;
-  right: -430px; 
-  width: 430px;
-  height: 100%; 
-  background-color: transparent;
-  overflow-y: auto;
-  transition: right 0.3s ease-in-out;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;  
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden on the right side */
+    width: 430px;
+    height: 100%;
+    
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
 }
 
-/* CSS for the cart content */
 .cart-content {
-  padding: 20px;
-  background-color: #fff; 
-  min-height: 100vh; 
-  width: 100%;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
+    padding: 20px;background-color: #fff;box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);width: 100%;    
 }
-
 .cart_mca_popup_icon img {
     width: 20px;
     margin-bottom: -5px;
@@ -457,9 +450,7 @@ background-color: #FDF1EC;
 .login_page p {
     color: #9d9d9d;
 }
- {
-    margin-top: 30px;
-}
+
 #login_form {
     display: flex;
     flex-direction: column;width: 100%;    margin-top: 30px;
@@ -541,11 +532,198 @@ label#login_form_pwd {
 }
 
 
+/***********OTP***************/
+.otp_page {width: 100%; max-width: 400px;display: flex;flex-direction: column;align-items: center;
+    margin: auto;justify-content: center; min-height: 100vh;}
+.otp_page h2 { margin: 0px 0 10px 0;}
+.otp_page p { color: #9d9d9d;}            
+.otp_input { width: 40px;border: 1px solid #e7e7e9;margin: 0 10px;text-align: center;font-size: 16px;
+  cursor: not-allowed;pointer-events: none;height: 40px; background-color: #FAFBFC;               }
+div#otp_inputs {margin-top: 30px;margin-bottom: 10px;}
+.otp_input:focus {border: 1px solid F15927;outline: none;}
+.otp_input:nth-child(1) {cursor: pointer;pointer-events: all;}
+.otp_submit {padding: 10px;border: none;background-color: #F15927;color: #fff;border-radius: 5px;margin-top: 20px;
+font-weight: 500;font-size: 16px;width: 100%;}
+.send_again a{color: #F15927;font-weight: 500;}
 
 
 
 
+/*********************Pickup****************/
+.breadcrumb_header {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pickup-delivery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    
+}
+.breadcrumb_header i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.pickup {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #F2F2F2;
+    padding: 20px;
+    border-radius: 10px;}
 
+.pickup:hover{
+    text-align: center;
+    background-color: #F2F2F2;
+    border: 1px solid #F15927;
+    padding: 20px;
+}
+
+
+
+/*******************address*************/
+.addressform form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.adminform_box {
+    width: 48%;
+    float: left;
+}
+
+.adminform_box input {
+    padding: 10px;
+    width: 100%;
+    margin-top: 6px;
+    background-color: #FAFBFC;
+    border: 1px solid #F3F3F4;
+    border-radius: 6px;
+}
+
+.adminform_box label {
+    font-size: 15px;
+}
+
+.addressform_submit {
+    background-color: #F15927;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 12px 30px;
+    box-shadow: 3px 3px 25px #0003;
+    font-weight: 500;
+    cursor: pointer;
+}
+.saved_address {
+    margin-top: 50px;
+    max-width: 600px;
+}
+
+.saved_address .cart_delivery {
+    padding: 5px 0;
+}
+
+.saved_address h3 {
+    padding-bottom: 20px;
+}
+.saved_address h6{color:#F15927; font-weight: 500;}
+
+
+
+
+/*************Coupons*************/
+.coupons_box_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.coupons_box {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;width: 48%;
+}
+
+.coupons_validity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;margin-top: 10px;
+}
+
+.coupons_validity p {
+    font-weight: 500;
+    color: #0F0806;
+}
+.coupons_validity p i {
+    margin-right: 5px;
+}
+.coupon_apply {
+    color: #F15927;
+    border: 1px solid #F15927;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 25px;
+}
+#coupon_applied {
+    background-color: #EBFFEE;
+    border: none;
+    color: #00AD07;
+}
+
+
+
+/*************** Item Details Page************/
+.item_details_inner_page {
+    display: flex;
+    gap: 30px;    max-width: 800px;
+}
+
+.item_details_inner_page .food_item_details_left img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+.food_item_details_quantity {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 25px 0;
+}
+.update_price {
+    color: #fff;
+    background-color: #F15927;
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+}
+.customisation_div {
+    padding-top: 25px;
+}
+.customisation_addons_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.customisation_addons_list p {
+    font-weight: 500;
+    color: #0F0806;
+}
+.customisation_addons_list span input {
+    margin-left: 6px;
+}
+.food_item_details_quantity_m{display:none;}
 
 
 
@@ -635,4 +813,66 @@ label#login_form_pwd {
     .offers_box {
         padding: 5px;
     }
+
+    .pickup-delivery {
+        flex-direction: column;
+    }
+    
+
+.pickup img {
+    width: 150px;
+    height: auto;
+}
+.breadcrumb_header {
+    padding: 10px 0;
+    gap: 5px;
+}
+.adminform_box {
+    width: 100%;
+    float: left;
+}
+.addressform {
+    margin-top: 20px;
+}
+
+.coupons_box {
+    padding: 15px;
+    width: 100%;
+}
+.coupons_box_wrapper {
+    gap: 20px;
+}
+#coupon_applied {
+    font-size: 13px;
+}
+.coupon_apply {
+    font-size: 13px;
+}
+
+.item_details_inner_page {
+    flex-direction: column;
+}
+.food_item_details_quantity_m {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: 5px 5px 35px #cbcbcb;
+}
+.food_item_details_quantity {
+    display: none;
+}
+.customisation_div {
+    padding-top: 10px;
+}
+
+.item_details_inner_page .food_item_details_left img {
+    width: 80px;
+}
+
+
 }

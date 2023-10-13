@@ -89,7 +89,19 @@
           <h5><span class="cart_mca_popup_icon" ><img src="./images/plus.png"></span>More Items</h5><i class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="cooking_instrcutions">
-          <h5><span class="cart_mca_popup_icon" ><img src="./images/cooking.png"></span>Add Cooking Instructions</h5><i class="fa-solid fa-chevron-right"></i>
+          <h5 href="#" onclick="openPopup();"><span class="cart_mca_popup_icon" ><img src="./images/cooking.png"></span>Add Cooking Instructions</h5><i class="fa-solid fa-chevron-right"></i>
+          <div id="cooking_overlay" class="cooking_overlay"></div>
+          <!-- Cooking Instructions Popup content -->
+          <div id="cookingpopup" class="cookingpopup">
+              <span class="cooking-close-button" onclick="closePopup();">&#x2716;</span> <!-- Close button (Unicode cross symbol) -->
+              <h3>Special Cooking Instruction</h3>
+              <h5>Instructions</h5>
+              <form action="/cookinginstructions.php" class="cookingform">
+                <textarea id="cipopup" name="w3review" rows="6" cols="50" placeholder="Start typing" oninput="updateWordCount();"></textarea> 
+                <div id="wordCount">0/100</div>               
+                <input type="submit" value="Add" class="cookingform_button">
+              </form>              
+          </div>
         </div>
         <a href="./coupons.html"><div class="apply_coupoun">
           <h5><span class="cart_mca_popup_icon" ><img src="./images/coupons.png"></span>Apply Coupon</h5><i class="fa-solid fa-chevron-right"></i>
@@ -263,6 +275,10 @@
       <a href="" class="best-sellers"><img src="./images/bestsellers.png"><span>Best seller</span></a>
       <a href="" class="top-rated"><img src="./images/toprated.png"><span>Top rated</span></a>
     </div>
+
+   
+
+
       <section id="food_item_1" class="food_item_box">
         <h3>Chaat</h3>
         <div class="food_item_details">

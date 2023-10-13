@@ -53,7 +53,18 @@ form, submit, input {font-family: 'Montserrat';}
 
 
 
-
+.Offers::-webkit-scrollbar {
+    width: 3px; height: 8px;
+  }
+  
+  .Offers::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  .Offers::-webkit-scrollbar-thumb {
+      background-color: #f6dcd3;
+    border-radius: 20px; 
+  }
 .Offers {
     display: flex;
     overflow: auto;
@@ -430,6 +441,84 @@ background-color: #FDF1EC;
     cursor: pointer;
 }*/
 /************Cart Popup***********/
+
+
+
+/************Cooking Popup***********/
+.cooking_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.cookingpopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;border-radius: 15px;
+}
+
+.cooking-close-button {
+    position: absolute;
+    top: -55px;
+    left: 45%;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 50%;
+}
+
+.close-button {
+    position: absolute;
+    top: -60px;
+    left: 43%;
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 50%;
+}
+
+.cookingform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#cipopup {
+    background-color: #F3F3F4;
+    border: none;
+    padding: 15px;
+}
+
+.cookingform_button {
+    background-color: #EBEBEB;
+    border: none;
+    padding: 13px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+#cookingpopup h3 {
+    margin-bottom: 20px;
+}
+#cookingpopup h5 {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+div#wordCount {
+    text-align: right;
+    color: #808080;
+}
+
+/************Cooking Popup***********/
 
 
 /************Login***********/

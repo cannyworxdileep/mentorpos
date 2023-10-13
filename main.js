@@ -93,3 +93,45 @@ $(document).ready(function() {
 });
 
 
+
+// Cooking Instruction Popup
+
+function openPopup() {
+  var overlay = document.getElementById("cooking_overlay");
+  var popup = document.getElementById("cookingpopup");
+
+  overlay.style.display = "block";
+  popup.style.display = "block";
+}
+
+function closePopup() {
+  var overlay = document.getElementById("cooking_overlay");
+  var popup = document.getElementById("cookingpopup");
+
+  overlay.style.display = "none";
+  popup.style.display = "none";
+}
+
+
+// Function to update the word count and limit
+function updateWordCount() {
+  var textarea = document.getElementById("cipopup");
+  var wordCountSpan = document.getElementById("wordCount");
+  var wordLimit = 100; // Set the word limit here
+
+  var words = textarea.value.split(/\s+/);
+  var wordCount = words.length;
+
+  wordCountSpan.textContent = wordCount + "/" + wordLimit;
+
+  if (wordCount > wordLimit) {
+      // Disable the submit button if the word limit is exceeded
+      document.getElementById("submitBtn").disabled = true;
+  } else {
+      // Enable the submit button if within the word limit
+      document.getElementById("submitBtn").disabled = false;
+  }
+}
+
+// Add an event listener to the textarea for input changes
+document.getElementById("cipopup").addEventListener("input", updateWordCount);
